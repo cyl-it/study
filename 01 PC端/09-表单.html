@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    <form action="" method="POST" >
+        用户名：<input type="text" name="username" value="请输入用户名" maxlength="6"><br />
+        密码：<input type="password" name="password"><br />
+        性别：<label for="nan">男</label>
+              <input type="radio" id="nan" name="sex" value="男" checked="chencked">
+              <label for="nv">女</label>
+              <input type="radio" id="nv" name="sex" value="女"><br />
+        爱好：唱歌<input type="checkbox" name="hobby">
+              跳舞<input type="checkbox" name="hobby">
+              睡觉<input type="checkbox" name="hobby"><br />
+        籍贯：<select>
+                  <option>江西</option>
+                  <option selected="selected">上海</option>
+                  <option>北京</option>
+             </select>
+             <br />
+        反馈：<textarea></textarea>
+        <input type="submit">
+        <input type="reset">
+
+    </form>
+</body>
+</html>
