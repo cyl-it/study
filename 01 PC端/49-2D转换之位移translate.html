@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 移动盒子的位置：定位  盒子的外边距  2D转换移动 */
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        div:first-child {
+            background-color: pink;
+            /* transform: translate(x,y) 
+               x是x轴上的距离，y是y轴上的距离
+            transform: translate(20px,20px);*/
+            /* 只移动x轴 */
+            transform: translateX(20px);
+            /* 只移动y轴 */
+            /* transform: translateY(20px); */
+        }
+        /* translate最大的优点：不影响其他元素的位置 */
+        div:last-child {
+            background-color:blue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+</body>
+</html>
