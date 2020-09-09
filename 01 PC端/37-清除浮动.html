@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 3、父级:after伪元素法 ，淘宝等在使用*/
+        .clearfix:after {
+            content:"";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        .clearfix {   
+            /* IE6、7专有 */
+            *zoom: 1;
+        }
+        
+        /* 1.额外标签法 */
+        /* .clear {
+            clear: both;
+        } */
+
+        /* 4.父级双伪元素清楚浮动 ,小米、腾讯等在使用*/
+        /* .clearfix:before,
+        .clearfix:after {
+            content:"";
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+         /* .clearfix {   
+             *zoom: 1;.
+        } */ 
+
+        .father {
+            /* 2.父级overflow: hidden; */
+            /* overflow: hidden; */
+            width: 800px;
+            border: 1px soild blue;
+            margin: 0 auto;
+        }
+        .ch1 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color:red;
+        }
+        .ch2 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color:pink;
+        }
+        .div {
+            width: 600px;
+            height: 400px;
+            background-color:black;
+        }
+    </style>
+</head>
+<body>
+    <div class="father clearfix">
+        <div class="ch1"></div>
+        <div class="ch2"></div>
+        <!-- 1.额外标签法 -->
+        <!-- <div class="clear"></div> -->
+    </div>
+    <div class="div"></div>
+</body>
+</html>
