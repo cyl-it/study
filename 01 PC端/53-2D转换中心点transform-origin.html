@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            margin: 100px auto;
+            /* 默认中心点时元素中心点 */
+            /* transform-origin：x y; */
+            /* transform-origin:50% 50%; */
+            /* x,y可以时方位名词或像素 */
+            /* transform-origin: left bottom; */
+        }
+        div::before {
+            content: "旋转";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            transform: rotate(180deg);
+            transform-origin: left bottom;
+            transition: all 0.3s;
+        }
+        div:hover::before{
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
