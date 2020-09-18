@@ -1,0 +1,26 @@
+方案1：
+.clearfix::after {
+    content:'';       /伪元素必须写的属性
+    display: block;   /插入的元素必须是块级
+    height: 0;        /不要看见这个元素
+    clear: both;      /核心代码：清除浮动
+    visibility: hidden;    /不看见这个元素
+}
+
+方案2：推荐
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: table;    /转换称块级元素并且一行显示
+}
+.clearfix::after {
+    clear: both;
+}
+
+
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
