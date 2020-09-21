@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            /* 给父级添加flex属性 */
+            display: flex;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+            /* 默认主轴是x轴，行row, y轴式侧轴 */
+            flex-direction: row;
+            /* 主轴设置成y轴 ，x轴成了侧轴 */
+            /* flex-direction: column; */
+
+            /* justify-content设置主轴上的子元素排列方式，使用前先确定主轴 */
+            /* 1. flex-start 默认从头开始 
+               2. flex-end 从尾部开始排列 
+               3. center 在主轴居中对齐*/
+            /* 4. space-around 平分剩余空间，左右有相同大小的边距 */
+            /* 5. space-between  两边贴边，平分剩余空间（重要） */
+            justify-content: space-between;
+        }
+        span {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+    </div>
+</body>
+</html>
