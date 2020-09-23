@@ -1,0 +1,32 @@
+.one {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    // less嵌套，子元素直接写在父元素里面
+    a {
+        color: green;
+
+        // 如果有伪类、交集选择器、伪类选择器，内层选择器的前面加&
+        &:hover {
+            color: yellow;
+        }
+    }
+}
+
+.two {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 150px;
+    background-color: skyblue;
+    .two_son{
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        background-color: yellow;
+        &::after {
+            content: "";
+
+        }
+    }
+}

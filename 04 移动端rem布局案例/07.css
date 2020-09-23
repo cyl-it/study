@@ -1,0 +1,27 @@
+.one {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+.one a {
+  color: green;
+}
+.one a:hover {
+  color: yellow;
+}
+.two {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 150px;
+  background-color: skyblue;
+}
+.two .two_son {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: yellow;
+}
+.two .two_son::after {
+  content: "";
+}
